@@ -27,7 +27,7 @@ jobs:
       - name: Copy files to server
         uses: cross-the-world/ssh-scp-ssh-pipelines@lastest
         with:
-          host: ${{ sectres.SSH_HOST}}
+          host: ${{ secrets.SSH_HOST}}
           user: ${{ secrets.SSH_USER}}
           key: ${{ secrets.SSH_PRIVATE_KEY}}
           scp: |
