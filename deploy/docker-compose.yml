@@ -15,6 +15,7 @@ services:
       - VALIDATION=http
     volumes:
             - ./swag:/config
+            - ./angular-tour-of-heroes:/config/www
     ports:
       - 443:443
       - 80:80 #optional
