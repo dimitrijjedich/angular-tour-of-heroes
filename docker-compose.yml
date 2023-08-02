@@ -24,6 +24,6 @@ services:
     image: httpd
     container_name: web
     volumes:
-            - ./dist/angular-tour-of-heroes:/usr/local/apache2/htdocs
+            - ./angular-tour-of-heroes:/usr/local/apache2/htdocs
     ports:
             - 80:80
