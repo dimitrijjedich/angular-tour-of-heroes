@@ -4,3 +4,11 @@
   <label for="name">Hero name: </label>
   <input id="name" [(ngModel)]="hero.name" placeholder="name">
 </div>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button type="button">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
