@@ -7,5 +7,4 @@ export class MessageService {
 
   messages: String[] = [];
 
-  constructor() { }
 }
