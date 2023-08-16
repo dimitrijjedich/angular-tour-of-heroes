@@ -35,6 +35,13 @@ export class HeroService {
     );
   }
 
+  updateHero(hero: Hero): Observable<any> {
+    return this.httpClient.put(this.heroesUrl, hero, this.httpOptions).pipe(
+      tap(_ => this.log(`updated hero id=${hero.id}`)),
+      catchError(this.handleError<any>('updateHero'))
+    );
+  }
+
   private log(message: String): void {
     this.messageService.add(`HeroService: ${message}`)
   }
