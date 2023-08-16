@@ -19,11 +19,10 @@ export class HeroService {
   ) { }
 
   getHeroes(): Observable<Hero[]> {
-    const heroes = this.httpClient.get<Hero[]>(this.heroesUrl).pipe(
+    return heroes = this.httpClient.get<Hero[]>(this.heroesUrl).pipe(
+      tap(_ => this.log('fetched heroes')),
       catchError(this.handleError<Hero[]>('getHeroes', []))
     );
-    this.log('fetched heroes');
-    return heroes;
   }
 
   getHero(id: number): Observable<Hero> {
