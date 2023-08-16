@@ -5,7 +5,11 @@ import { Hero } from "./hero";
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService{
 
   constructor() { }
+
+  createDb() {
+    return [];
+  }
 }
