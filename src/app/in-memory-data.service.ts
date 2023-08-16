@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService{
   constructor() { }
 
   createDb() {
-    return [
+    const heroes = [
       { id: 12, name: 'Dr. Nice' },
       { id: 13, name: 'Bombasto' },
       { id: 14, name: 'Celeritas' },
@@ -21,6 +21,7 @@ export class InMemoryDataService implements InMemoryDbService{
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
+    return {heroes};
   }
 
   // Returns the highest hero id+1 or 11 as initial value
