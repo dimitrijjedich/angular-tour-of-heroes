@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { Hero } from "./hero";
 import { HEROES } from './mock-heroes';
 import { MessageService } from "./message.service";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
