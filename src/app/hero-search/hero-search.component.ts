@@ -15,6 +15,14 @@ export class HeroSearchComponent {
   constructor(private heroService: HeroService) {
   }
 
+  ngOnInit(): void {
+    this.heroes$ = this.searchTerm.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((term: string) => this.heroService.searchHeroes(term)),
+    );
+  }
+
   search(term: string): void {
     this.searchTerm.next(term);
   }
