@@ -11,4 +11,7 @@ import { HeroService } from "../hero.service";
 export class HeroSearchComponent {
   heroes$!: Observable<Hero[]>;
   private searchTerm = new Subject<string>();
+
+  constructor(private heroService: HeroService) {
+  }
 }
