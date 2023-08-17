@@ -8,5 +8,6 @@ import { Hero } from "../hero";
   styleUrls: ['./hero-search.component.css']
 })
 export class HeroSearchComponent {
-
+  heroes$!: Observable<Hero[]>;
+  private searchTerm = new Subject<string>();
 }
