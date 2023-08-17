@@ -14,4 +14,8 @@ export class HeroSearchComponent {
 
   constructor(private heroService: HeroService) {
   }
+
+  search(term: string): void {
+    this.searchTerm.next(term);
+  }
 }
